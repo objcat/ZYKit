@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zy_safe</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+        CGFloat naviHeight = self.navigationController.navigationBar.frame.size.height;
+        CGFloat topHeight = statusBarHeight + naviHeight;
+        CGFloat bottomHeight = 0;
+        if (@available(iOS 11.0, *)) {
+            bottomHeight = self.view.safeAreaInsets.bottom;
+        }
+        self.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - topHeight - bottomHeight - 49);</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>11B68AE5-3EE4-44A1-BE9F-48A9942E113A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>导航栏和底部安全区域距离</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>zy_safe</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
